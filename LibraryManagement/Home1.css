@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: large;
+    font-weight: bold;
+}
+.menubar{
+    display: flex;
+    flex-direction: row;
+}
+.mainmain{
+    height: 30rem;
+    width: 50rem;
+    text-align: center;
+    background-position:bottom;
+    background-size: cover;
+    background-color:#f0ece2;
+    
+}
+.main{
+    
+    width: 50rem;
+    background-color: aquamarine;
+    display: flex;
+    flex-direction: row;
+    background-size: cover;
+}
+.main button{
+    height: 3rem;
+    width:13rem;
+    background-color:rgb(64, 137, 120);
+    border-radius: 15px;
+    box-shadow: 2px 2px 5px black;
+    color: white;
+}
+.main button:hover{
+    background-color: darkgreen;
+  
+    
+}
+.sub{
+    width: 50rem;
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 3rem;
+    
+}
+.sub button{
+    padding: 0;
+    margin: 0;
+    height: 3rem;
+    width: 7.5rem;
+    background-color:#c7b198 ;
+    border-radius: 3rem;
+    box-shadow: 1px 1px 5px black;
+    
+}
+.sign div{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.sign button{
+    height: 2rem;
+    width: 10rem;
+    background-color:#c7b198;
+    font-size: small;
+}
+.sign button:hover{
+  background-color: #596e79;
+}

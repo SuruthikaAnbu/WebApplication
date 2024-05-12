@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Home1.css">
+</head>
+
+<body>
+    <script src="Home1.js"></script>
+    <button onclick="exportprint()">export</button>
+    <div class="mainmain" id="homepage">
+        <div  id="main2" style="display: block;">
+            <div class="main">
+                <div><button onclick="viewSignUp()">User Registration</button></div>
+                <div><button onclick="viewSignIn()">User Login</button></div>
+                <div><button>Exit</button></div>
+            </div>
+        </div>
+        <div style="display: none;" class="sign" id="signinid">
+            <label for="">Enter your name</label>
+            <input type="text" id="nameid">
+            <br>
+            <label for="">Enter your password</label>
+            <input type="password" id="passWordid">
+            <br>
+            <button onclick="loginFun()">Login</button>
+        </div>
+        <!--User registration-->
+        <div id="signupId" style="display: none;">
+            <h1>Registration</h1>
+            <form action="" id="userForm">
+                
+                    <label for="">Enter your name</label>
+                    <input type="text" id="Rname">
+                    <br>
+                    <label for="">Enter your password</label>
+                    <input type="password" id="Rpassword">
+                    <br>
+                    <label for="">Enter your Gender</label>
+                    <input type="text" id="RGender">
+                    <br>
+                    <label for="">Enter your Department</label>
+                    <input type="text" id="RDepartment">
+                    <br>
+                    <label for="">Enter your mobilenumber</label>
+                    <input type="text" id="RmobileNumber">
+                    <br>
+                    <label for="">Enter your mailID</label>
+                    <input type="email" id="Rmail">
+                    <br>
+                    <label for="">Enter your Walletbalance</label>
+                    <input type="number" id="Rbalance">
+                    <br>
+                    <label for="">upload image</label>
+                    <input type="file" id="imageid1">
+                    <button onclick="Register()" type="submit">Register</button>
+            </form>
+            
+        </div>
+        <div  class="sub"  id="menubarid" class="mainmenu1" style="display: none;">
+            <button onclick="showBook()">BookDetails</button>
+            <button onclick="showBookBuy()">Borrowbook</button>
+            <button onclick="showOrderHistory()">ShowBorrowhistory</button>
+            <button onclick="returnBook()">ReturnBooks</button>
+            <button onclick="rechargeShow()">WalletRecharge</button>
+            <button onclick="exit()">Exit</button>
+        </div>
+        <!--return book-->
+        
+            <div id="returnbook"  style="display: none;">
+                Return book
+                        <!--Display order history for return book-->
+                <div id="orderID3" >
+                    <table id="orderdata3" border="1">
+                        <thead>
+                            <tr>
+
+                                <th>BorrowID</th>
+                                <th>BookID</th>
+                                <th>UserID</th>
+                                <th>BorrowedDate</th>
+                                <th>BorrowedBookCount</th>
+                                <th>Status</th>
+                                <th>PaidFineAmount</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbody3">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        
+        <!--Exit end-->
+        <div id="exitEnd" style="display:none;">
+            <h1>Thank you</h1>
+        </div>
+        <!--Display order history-->
+        <div id="orderID" style="display: none;">
+            <table id="orderdata" border="1">
+                <thead>
+                    <tr>
+
+                        <th>BorrowID</th>
+                        <th>BookID</th>
+                        <th>UserID</th>
+                        <th>BorrowedDate</th>
+                        <th>BorrowedBookCount</th>
+                        <th>Status</th>
+                        <th>PaidFineAmount</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody1">
+
+                </tbody>
+            </table>
+        </div>
+         
+        <!--Display book details-->
+        <div id="ticketID" style="display: none;">
+            <table id="ticketData" border="1">
+                <thead>
+                    <button style="background-color: chartreuse;" onclick="addbook()">add</button>
+                    <tr>
+                        <th>BookID</th>
+                        <th>Book name</th>
+                        <th>Author name</th>
+                        <th>book count</th>
+                        <th>Action</th>
+
+                    </tr>
+                </thead>
+                <tbody id="tbody2">
+
+                </tbody>
+            </table>
+        </div>
+        <!--Display book details for borrow-->
+        <div id="ticketID3" style="display: none;">
+            <table id="ticketData" border="1">
+                <thead>
+                    <tr>
+                        <th>BookID</th>
+                        <th>Book name</th>
+                        <th>Author name</th>
+                        <th>book count</th>
+                        <th>Images</th>
+                        <th>Action</th>
+
+                    </tr>
+                </thead>
+                <tbody id="tbody4">
+
+                </tbody>
+            </table>
+            <div style="display: none;" id="countdis">
+                <div>Enter the count</div>
+                <input type="number" id="userBookCount">
+            </div>
+        </div>
+
+        <!--Recharge-->
+        <div id="rechargeID" style="display: none;">
+            <h1>Recharge</h1>
+            <label for="">Enter the amount for recharge</label>
+            <input type="number" id="amount5">
+            <button id="rechargeAmount" onclick="recharge()">Recharge</button>
+            <div id="displayAmount"></div>
+        </div>
+        <!--edit book-->
+        <div id="edit" style="display: none;">
+            <h1>Edit book details</h1>
+            <input type="text" id="edit-name" placeholder="Book Name"><br>
+            <input type="text" id="edit-author" placeholder="Author name"><br>
+            <input type="number" id="edit-count" placeholder="Book count"><br>
+            <button id="edit-button" id="submit2" onclick="ShowEdit()">Submit</button>
+
+        </div>
+
+    </div>
+</body>
+
+</html>
