@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Document</title>
+    <link rel="stylesheet" href="mainIndex.css">
+    
+</head>
+<body>
+    <h1>testing git</h1>
+    <div class="mainmaindiv" style="display: block;" id="mainmainID">
+        <div class="maindiv">
+            <div><button onclick="signinShow()">Sign-in</button></div>
+            <div><button onclick="signUpFun()">Signup</button></div>
+            
+        </div>
+        <div id="existingUserPage" style="display: none;" class="signinvis">
+            <h3>SignInPage</h3>
+            <label for="">User ID : </label>
+            <input type="number" id="existinguserID">
+            <button onclick="signIn()">Signin</button>
+            <label for="existinguserID"></label>
+        </div>
+         <!--sign-up-->
+       <div id="signiUpPAge" style="display: none;">
+        <form action="" id="signUpForm">
+            <label for="">
+                Name
+                <input type="text" id="signUPUname">
+            </label>
+            <br><br>
+            <label for="">
+                Email
+                <input type="email" id="signUpmailID">
+            </label>
+            <br><br>
+            <label for="">
+                Password
+                <input type="password" id="signUpPW">
+            </label>
+            <br><br>
+            <label for="">
+                confirmPassword
+                <input type="password" id="signUpConPW">
+            </label>
+            <br><br>
+            <label for="">
+                Phone number
+                <input type="number" id="signUppn">
+            </label>
+            <br><br>
+            <label for="">
+                Balance
+                <input type="Number" id="signUpBalance">
+            </label>
+            <br>
+            <br>
+            <label for="">
+                <input type="button" id="signupSumbit" onclick="signUpShow()" value="submit">
+            </label>
+        </form>
+       </div>
+    </div>
+    
+    
+    
+    <div class="home1" style="visibility: hidden;" id="homediv">
+        <div><button onclick="home()">Home</button></div>
+        <div><button onclick="renderTable()">Medicine Detail</button></div>
+        <div><button onclick="checkPurchase()">Purchase</button></div>
+        <div><button onclick="checkPurchaseDetails()">Cancel Order</button></div>
+        <div><button onclick="topUpVisible()">Top-up</button></div>
+        <div><button onclick="showBalance()">Show Balance</button></div>
+        <div><button onclick="showOrderHistory()">order History</button></div>
+
+    </div>
+        <!--Home page-->
+        <div style="display: none;" id="homepage">
+            <h1> <span id="homeName"></span></h1>
+        </div>
+        <!--Display details-->
+        <div style="display: none;" id="tablediv">
+            <table id="datatable" border="1" >
+                <thead>
+                    <tr>
+                        <th>MedicineID</th>
+                        <th>MedicineName</th>
+                        <th>MEdicineCount</th>
+                        <th>MEdicinePrice</th>
+                        <th>ExpiryDate</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+        </div>
+        <!--Display details  for purchar-->
+        <div style="display: none;" id="purchasetable" style="background-color: aqua;">
+            <table id="purchasedataTable" border="1" style="background-color: blue;" >
+                <thead>
+                    <tr>
+                        <th>MedicineID</th>
+                        <th>MedicineName</th>
+                        <th>MEdicineCount</th>
+                        <th>MEdicinePrice</th>
+                        <th>ExpiryDate</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+        </div>
+        <!--topup-->
+        <div id="topUpId" style="display: none;">
+            <label for="">Enter The Amount</label>
+            <input type="number" id="getAmount">
+            <button onclick="topup()">Top-up</button>
+        </div>
+        <!--Purchase -->
+        <div id="purchaseMesdicineShow" style="display: none;">
+            <!-- <label for="">Enter the Medicine id to purchase : </label>
+            <input type="text" id="medPurchase"> -->
+            <label for="">Quantity</label>
+            <input type="text" id="Quan">
+            <!-- <button onclick="fun()">Submit</button> -->
+
+        </div>
+        <!--Order details  status-->
+        <table id="orderHistorytable" border="1" style="display: none;">
+            <thead>
+                <tr>
+                    <th>MedicineID</th>
+                    <th>MedicineName</th>
+                    <th>MEdicineCount</th>
+                    <th>MEdicinePrice</th>
+                    <th>MedicinePrice</th>
+                    <th>OrderStatus</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+       <!--cancel order-->
+       <div id="cancelOrder2" style="display: none;">
+        <table id="orderHistorytable2" border="1" style="background-color: blue;">
+            <thead>
+                <tr>
+                    <th>MedicineID</th>
+                    <th>MedicineName</th>
+                    <th>MEdicineCount</th>
+                    <th>MedicinePrice</th>
+                    <th>OrderStatus</th>
+                    <th>Button</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+
+    </div>
+        <script src="mainIndex.js"></script>
+</body>
+</html>
